@@ -79,13 +79,6 @@ vnoremap <leader>c <ESC>'<O/*<ESC>'>o*/<ESC>V'<k
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
 
-" colors for Showmarks
-hi LineNr ctermfg=Black ctermbg=lightgrey cterm=bold
-hi ShowMarksHLl ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLu ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLo ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLm ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-
 " PLUGIN-SPECIFIC STUFF BELOW
 
 " vundle setup
@@ -99,6 +92,12 @@ Bundle 'tpope/vim-fugitive'
 
 " vim-scripts repos
 Bundle 'ShowMarks'
+hi LineNr ctermfg=Black ctermbg=lightgrey cterm=bold
+hi ShowMarksHLl ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
+hi ShowMarksHLu ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
+hi ShowMarksHLo ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
+hi ShowMarksHLm ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
+
 Bundle 'vimwiki'
 "Bundle 'phpqa'
 "Bundle 'YankRing.vim'
