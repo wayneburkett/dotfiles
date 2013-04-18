@@ -18,7 +18,7 @@ set softtabstop=4				" pressing <tab> should indent by n characters...
 set shiftwidth=4				" use mod-n indentation
 
 " misc
-set background=dark				
+set background=dark
 set nowrap 
 set diffopt+=iwhite
 set backup
@@ -29,9 +29,11 @@ set backupdir=$HOME/.vim/bak	" where to save tilde files
 set tags=$HOME/.vim/tags/php
 set showcmd						" show the leader key
 set number						" show line nums
-set autochdir					" change pwd when opening new wins/tabs		
+set autochdir					" change pwd when opening new wins/tabs
 set laststatus=2				" always show the statusline
 set encoding=utf-8				" necessary to show Unicode glyphs
+"set list listchars=tab:»·,trail:·
+"map <Leader>ct :!ctags -R .<CR>
 
 " searching
 set hlsearch					" highlight search
@@ -53,7 +55,7 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" toggle hlsearch with ctl-n (need to re-map this)
+" toggle hlsearch
 noremap <silent> <leader>n :noh<CR>
 
 " search in new window
@@ -96,6 +98,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'spolu/dwm.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/tComment'
 
 " vim-scripts repos
 Bundle 'ShowMarks'
