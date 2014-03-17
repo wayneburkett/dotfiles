@@ -26,14 +26,11 @@ set mouse=a						" enable mouse
 set ttymouse=xterm2
 set dir=$HOME/.vim/bak			" where to put swp files
 set backupdir=$HOME/.vim/bak	" where to save tilde files
-set tags=$HOME/.vim/tags/php
 set showcmd						" show the leader key
 set number						" show line nums
 set autochdir					" change pwd when opening new wins/tabs
 set laststatus=2				" always show the statusline
 set encoding=utf-8				" necessary to show Unicode glyphs
-"set list listchars=tab:»·,trail:·
-"map <Leader>ct :!ctags -R .<CR>
 
 " searching
 set hlsearch					" highlight search
@@ -55,7 +52,7 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" toggle hlsearch
+" toggle hlsearch with ctl-n (need to re-map this because of dwm)
 noremap <silent> <leader>n :noh<CR>
 
 " search in new window
@@ -91,7 +88,16 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'spolu/dwm.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/tComment'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+
+Bundle 'brookhong/DBGPavim'
+let g:dbgPavimPort = 9001
+let g:dbgPavimBreakAtEntry = 1
+
+Bundle 'Lokaltog/vim-powerline'
+let g:Powerline_symbols='compatible'
 
 " vim-scripts repos
 Bundle 'ShowMarks'
@@ -123,7 +129,4 @@ nnoremap <C-p> :set paste<CR>:exe PhpDoc()<CR>:set nopaste<CR>
 Bundle 'calendar.vim--Matsumoto'
 nnoremap <silent> <leader>c :Calendar<CR>
 let g:calendar_mark='right'
-
-Bundle 'Lokaltog/vim-powerline'
-let g:Powerline_symbols='compatible'
 
