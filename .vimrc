@@ -21,11 +21,12 @@ set shiftwidth=4                " use mod-n indentation
 set background=dark
 set nowrap 
 set diffopt+=iwhite
-set backup
 set mouse=a                     " enable mouse
 set ttymouse=xterm2
 set dir=$HOME/.vim/bak          " where to put swp files
+set backup
 set backupdir=$HOME/.vim/bak    " where to save tilde files
+set writebackup
 set showcmd                     " show the leader key
 set number                      " show line nums
 set autochdir                   " change pwd when opening new wins/tabs
@@ -52,7 +53,7 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" toggle hlsearch with ctl-n (need to re-map this because of dwm)
+" turn off search highlight
 noremap <silent> <leader>n :noh<CR>
 
 " search in new window
