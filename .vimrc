@@ -120,13 +120,13 @@ Bundle 'Syntastic'
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_disable=1
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 Bundle 'taglist.vim'
-let Tlist_GainFocus_On_ToggleOpen=0
-let Tlist_Exit_OnlyWindow=0
-let Tlist_Process_File_Always=0
+let Tlist_GainFocus_On_ToggleOpen = 0
+let Tlist_Exit_OnlyWindow = 0
+let Tlist_Process_File_Always = 0
 nnoremap <silent> <leader>t :TlistToggle<CR>
 
 Bundle 'PDV--phpDocumentor-for-Vim'
