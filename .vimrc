@@ -1,42 +1,42 @@
-set nocompatible				" vimproved
-filetype plugin indent on		" automatically detect file types
+set nocompatible                " vimproved
+filetype plugin indent on       " automatically detect file types
 
 syntax enable
 colors default
 
 " colors
 if &term =~ "xterm-256color" || &term =~ "screen-256color"
-	set t_Co=256				" hint to vim that we're in 256-color mode
-	set t_AB=[48;5;%dm
-	set t_AF=[38;5;%dm
+    set t_Co=256                " hint to vim that we're in 256-color mode
+    set t_AB=[48;5;%dm
+    set t_AF=[38;5;%dm
 endif
 
 " formatting
-set ts=4						" display exisiting tabs as mod 4 indentation
-set softtabstop=4				" pressing <tab> should indent by n characters...
-"set expandtab					" ...and those characters should be spaces
-set shiftwidth=4				" use mod-n indentation
+set ts=4                        " display exisiting tabs as mod 4 indentation
+set softtabstop=4               " pressing <tab> should indent by n characters...
+set expandtab                   " ...and those characters should be spaces
+set shiftwidth=4                " use mod-n indentation
 
 " misc
 set background=dark
 set nowrap 
 set diffopt+=iwhite
 set backup
-set mouse=a						" enable mouse
+set mouse=a                     " enable mouse
 set ttymouse=xterm2
-set dir=$HOME/.vim/bak			" where to put swp files
-set backupdir=$HOME/.vim/bak	" where to save tilde files
-set showcmd						" show the leader key
-set number						" show line nums
-set autochdir					" change pwd when opening new wins/tabs
-set laststatus=2				" always show the statusline
-set encoding=utf-8				" necessary to show Unicode glyphs
+set dir=$HOME/.vim/bak          " where to put swp files
+set backupdir=$HOME/.vim/bak    " where to save tilde files
+set showcmd                     " show the leader key
+set number                      " show line nums
+set autochdir                   " change pwd when opening new wins/tabs
+set laststatus=2                " always show the statusline
+set encoding=utf-8              " necessary to show Unicode glyphs
 
 " searching
-set hlsearch					" highlight search
-set incsearch					" incremental search
-set ignorecase					" ignore case...
-set smartcase					" ...unless term has upper-case
+set hlsearch                    " highlight search
+set incsearch                   " incremental search
+set ignorecase                  " ignore case...
+set smartcase                   " ...unless term has upper-case
 
 " suffixes that get lower priority when doing tab completion for filenames
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
@@ -91,6 +91,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'pangloss/vim-javascript'
 
 Bundle 'brookhong/DBGPavim'
 let g:dbgPavimPort = 9001
@@ -100,6 +101,11 @@ Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols='compatible'
 
 " vim-scripts repos
+Bundle 'xmledit'
+Bundle 'python.vim'
+Bundle 'php.vim'
+Bundle 'badwolf'
+
 Bundle 'ShowMarks'
 hi LineNr ctermfg=Black ctermbg=lightgrey cterm=bold
 hi ShowMarksHLl ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
@@ -108,19 +114,19 @@ hi ShowMarksHLo ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown g
 hi ShowMarksHLm ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
 
 Bundle 'vimwiki'
-"Bundle 'phpqa'
-"Bundle 'YankRing.vim'
-"Bundle 'DBGp-client'
+"nnoremap <silent> <leader>we :VimwikiAll2HTML<CR>
 
 Bundle 'Syntastic'
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_disable=1
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 Bundle 'taglist.vim'
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Process_File_Always=1
+let Tlist_GainFocus_On_ToggleOpen=0
+let Tlist_Exit_OnlyWindow=0
+let Tlist_Process_File_Always=0
 nnoremap <silent> <leader>t :TlistToggle<CR>
 
 Bundle 'PDV--phpDocumentor-for-Vim'
