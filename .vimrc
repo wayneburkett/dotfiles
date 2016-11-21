@@ -81,9 +81,9 @@ au BufRead,BufNewFile *.log set filetype=error_log
 
 " PLUGIN-SPECIFIC STUFF BELOW
 
-" vundle setup
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " github repos
 Bundle 'gmarik/vundle'
@@ -137,3 +137,5 @@ Bundle 'calendar.vim--Matsumoto'
 nnoremap <silent> <leader>c :Calendar<CR>
 let g:calendar_mark='right'
 
+call vundle#end()            " required
+filetype plugin indent on    " required
