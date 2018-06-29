@@ -1,3 +1,3 @@
 vimrc
 =====
-My .vimrc
+My .vimrc is better than yours.
