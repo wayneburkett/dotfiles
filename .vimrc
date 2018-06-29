@@ -80,13 +80,12 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
 
 " PLUGIN-SPECIFIC STUFF BELOW
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " github repos
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 Bundle 'spolu/dwm.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
@@ -106,13 +105,6 @@ Bundle 'xmledit'
 Bundle 'python.vim'
 Bundle 'php.vim'
 Bundle 'badwolf'
-
-Bundle 'ShowMarks'
-hi LineNr ctermfg=Black ctermbg=lightgrey cterm=bold
-hi ShowMarksHLl ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLu ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLo ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
-hi ShowMarksHLm ctermbg=Black ctermfg=Brown cterm=bold guibg=Black guifg=Brown gui=bold
 
 Bundle 'vimwiki'
 "nnoremap <silent> <leader>we :VimwikiAll2HTML<CR>
@@ -139,3 +131,5 @@ let g:calendar_mark='right'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme diffcolors
