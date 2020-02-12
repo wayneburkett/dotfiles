@@ -1,3 +1,3 @@
-vimrc
+My dotfiles
 =====
-My .vimrc is better than yours.
+That's it.
