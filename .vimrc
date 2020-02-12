@@ -78,6 +78,7 @@ vnoremap <leader>c <ESC>'<O/*<ESC>'>o*/<ESC>V'<k
 " syntax highlighting
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
+au BufNewFile,BufRead Fastfile set syntax=ruby
 
 " PLUGIN-SPECIFIC STUFF BELOW
 " set the runtime path to include Vundle and initialize
