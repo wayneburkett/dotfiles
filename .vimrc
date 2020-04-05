@@ -32,6 +32,7 @@ set number                      " show line nums
 set autochdir                   " change pwd when opening new wins/tabs
 set laststatus=2                " always show the statusline
 set encoding=utf-8              " necessary to show Unicode glyphs
+set belloff=all                 " zzzzzzzzzzz
 
 " searching
 set hlsearch                    " highlight search
@@ -79,6 +80,7 @@ vnoremap <leader>c <ESC>'<O/*<ESC>'>o*/<ESC>V'<k
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
 au BufNewFile,BufRead Fastfile set syntax=ruby
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " PLUGIN-SPECIFIC STUFF BELOW
 " set the runtime path to include Vundle and initialize
@@ -92,6 +94,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-sleuth'
 Bundle 'pangloss/vim-javascript'
 
 Bundle 'brookhong/DBGPavim'
