@@ -1,4 +1,8 @@
-# .zshrc
+# global .zshrc
+#
+# only put stuff here that should be committed and that would apply on any 
+# laptop (i.e. don't put work stuff (see the bottom of this file for where 
+# to put work stuff) or anything private in this file) 
 
 eval "$(hub alias -s)"
 
