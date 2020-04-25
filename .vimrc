@@ -31,6 +31,7 @@ set number                      " show line nums
 set autochdir                   " change pwd when opening new wins/tabs
 set laststatus=2                " always show the statusline
 set encoding=utf-8              " necessary to show Unicode glyphs
+set belloff=all                 " zzzzzzzzzzz
 
 " searching
 set hlsearch                    " highlight search
@@ -79,6 +80,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
 au BufNewFile,BufRead Fastfile set syntax=ruby
 au BufRead,BufNewFile *swift set filetype=swift
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " PLUGIN-SPECIFIC STUFF BELOW
 " set the runtime path to include Vundle and initialize
@@ -94,6 +96,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-sleuth'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
