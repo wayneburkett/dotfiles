@@ -1,8 +1,7 @@
 set nocompatible                " vimproved
-filetype plugin indent on       " automatically detect file types
 
 syntax enable
-colors default
+"colors default
 
 " colors
 if &term =~ "xterm-256color" || &term =~ "screen-256color"
@@ -79,6 +78,7 @@ vnoremap <leader>c <ESC>'<O/*<ESC>'>o*/<ESC>V'<k
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.log set filetype=error_log
 au BufNewFile,BufRead Fastfile set syntax=ruby
+au BufRead,BufNewFile *swift set filetype=swift
 
 " PLUGIN-SPECIFIC STUFF BELOW
 " set the runtime path to include Vundle and initialize
@@ -87,50 +87,58 @@ call vundle#begin()
 
 " github repos
 Plugin 'gmarik/vundle'
-Bundle 'spolu/dwm.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'pangloss/vim-javascript'
+Plugin 'lifepillar/vim-mucomplete'
+Plugin 'spolu/dwm.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'pangloss/vim-javascript'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'arzg/vim-swift'
 
-Bundle 'brookhong/DBGPavim'
+Plugin 'arzg/vim-colors-xcode'
+"au FileType swift colorscheme xcodedark
+
+Plugin 'brookhong/DBGPavim'
 let g:dbgPavimPort = 9001
 let g:dbgPavimBreakAtEntry = 1
 
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 let g:Powerline_symbols='compatible'
 
 " vim-scripts repos
-Bundle 'xmledit'
-Bundle 'python.vim'
-Bundle 'php.vim'
-Bundle 'badwolf'
+Plugin 'xmledit'
+Plugin 'python.vim'
+Plugin 'php.vim'
+Plugin 'badwolf'
 
-Bundle 'vimwiki'
+Plugin 'vimwiki'
 "nnoremap <silent> <leader>we :VimwikiAll2HTML<CR>
 
-Bundle 'Syntastic'
+Plugin 'Syntastic'
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_phpcs_disable=1
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
-Bundle 'taglist.vim'
+Plugin 'taglist.vim'
 let Tlist_GainFocus_On_ToggleOpen = 0
 let Tlist_Exit_OnlyWindow = 0
 let Tlist_Process_File_Always = 0
 nnoremap <silent> <leader>t :TlistToggle<CR>
 
-Bundle 'PDV--phpDocumentor-for-Vim'
+Plugin 'PDV--phpDocumentor-for-Vim'
 nnoremap <C-p> :set paste<CR>:exe PhpDoc()<CR>:set nopaste<CR>
 
-Bundle 'calendar.vim--Matsumoto'
+Plugin 'calendar.vim--Matsumoto'
 nnoremap <silent> <leader>c :Calendar<CR>
 let g:calendar_mark='right'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme diffcolors
