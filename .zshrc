@@ -27,6 +27,7 @@ alias ll='ls -lah'
 alias master='gitswitch master'
 alias develop='gitswitch develop'
 alias core='gitswitch core'
+alias status='git status'
 alias react-pack='npm install && cd ios && pod install && cd .. && npm pack'
 alias pod-refresh='rm -rf "${HOME}/Library/Caches/CocoaPods" && rm -rf "`pwd`/Pods/" && pod update --verbose'
 
