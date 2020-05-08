@@ -22,12 +22,18 @@ set -o vi
 # laptop
 alias laptop='bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)'
 
-# more aliases
+# aliases
 alias ll='ls -lah'
+alias notes='vi ~/.notes'
+alias profile='vi ~/.zshrc'
+
+# git aliases
 alias master='gitswitch master'
 alias develop='gitswitch develop'
 alias core='gitswitch core'
 alias status='git status'
+
+# dev aliases
 alias react-pack='npm install && cd ios && pod install && cd .. && npm pack'
 alias pod-refresh='rm -rf "${HOME}/Library/Caches/CocoaPods" && rm -rf "`pwd`/Pods/" && pod update --verbose'
 
