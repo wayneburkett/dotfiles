@@ -19,7 +19,6 @@ set shiftwidth=4                " use mod-n indentation
 " misc
 set background=dark
 set nowrap 
-set diffopt+=iwhite
 set mouse=a                     " enable mouse
 set ttymouse=xterm2
 set dir=$HOME/.vim/bak          " where to put swp files
@@ -32,6 +31,11 @@ set autochdir                   " change pwd when opening new wins/tabs
 set laststatus=2                " always show the statusline
 set encoding=utf-8              " necessary to show Unicode glyphs
 set belloff=all                 " zzzzzzzzzzz
+
+if &diff
+    set diffopt-=internal
+    set diffopt+=iwhite
+endif
 
 " searching
 set hlsearch                    " highlight search
