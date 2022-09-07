@@ -14,9 +14,6 @@ export LSCOLORS=exfxcxdxbxegedabagacad;
 
 set -o vi
 
-# laptop
-alias laptop='bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)'
-
 # aliases
 alias ll='ls -lah'
 alias notes='vi ~/.notes'
