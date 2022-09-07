@@ -6,11 +6,6 @@
 
 eval "$(hub alias -s)"
 
-# default ruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.7.0
-
 # command prompt
 precmd () { PS1="[%~] %F{magenta}$(parse_git_branch)%f $ " }
 
@@ -71,3 +66,6 @@ setopt incappendhistory
 
 # a place to keep stuff that should be kept only to this laptop
 FILE=~/.zshrc_local  && test -f $FILE && source $FILE
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
