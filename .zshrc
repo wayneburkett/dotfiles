@@ -58,7 +58,7 @@ function parse_git_branch
 
 # history
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.history
 SAVEHIST=5000
 setopt appendhistory
 setopt sharehistory
