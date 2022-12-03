@@ -21,6 +21,7 @@ alias profile='vi ~/.zshrc'
 
 # git aliases
 alias master='gitswitch master'
+alias main='gitswitch main'
 alias develop='gitswitch develop'
 alias core='gitswitch core'
 alias status='git status'
